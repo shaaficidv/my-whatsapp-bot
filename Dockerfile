@@ -1,6 +1,7 @@
+# Isticmaal image leh Python
 FROM python:3.10-slim-buster
 
-# Rakib agabka muhiimka u ah dhismaha tgcalls iyo ffmpeg
+# Rakib agabka dhismaha (Compilers) iyo ffmpeg
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y --no-install-recommends \
     ffmpeg \
@@ -14,7 +15,7 @@ RUN apt-get update && apt-get upgrade -y && \
 WORKDIR /app
 COPY . .
 
-# Rakib library-yada
+# Cusboonaysii pip oo rakib requirements
 RUN pip3 install --upgrade pip
 RUN pip3 install -U -r requirements.txt
 
